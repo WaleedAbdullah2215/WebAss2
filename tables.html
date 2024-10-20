@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Tables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Weather App Logo">
+            </div>
+            <nav>
+                <div id="dashboard-container" class="nav-container">
+                    <a href="index.html">Dashboard</a>
+                </div>
+                <div id="tables-container" class="nav-container">
+                    <a href="tables.html" class="active">Tables</a>
+                </div>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search for a city...">
+                    <button id="getWeatherBtn" class="nav-btn">Get Weather</button>
+                    <button id="toggleUnitBtn" class="nav-btn">°C / °F</button>
+                </div>
+                <div class="user-profile">
+                    <img src="pp.jpg" alt="User  Profile">
+                </div>
+            </header>
+            <div class="tables-content">
+                <section class="weather-table">
+                    <div class="table-controls">
+                        <select id="filterSelect" class="filter-select">
+                            <option value="none">No Filter</option>
+                            <option value="tempAsc">Temperature (Low to High)</option>
+                            <option value="tempDesc">Temperature (High to Low)</option>
+                            <option value="rain">Rainy Days Only</option>
+                            <option value="highest">Highest Temperature</option>
+                        </select>
+                    </div>
+                    <table id="forecastTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature</th>
+                                <th>Humidity</th>
+                                <th>Wind Speed</th>
+                                <th>Weather</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div id="pagination" class="pagination"></div>
+                </section>
+                <section class="chat-section">
+                    <div id="chatOutput" class="chat-output"></div>
+                    <input type="text" id="chatInput" placeholder="Ask me anything about weather...">
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="tables.js"></script>
+</body>
+
+</html>

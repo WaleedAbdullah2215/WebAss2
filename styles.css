@@ -1,0 +1,363 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(249, 214, 245, 0.9);
+    padding: 20px;
+    border-right: 2px solid #d9b8e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    margin-bottom: 100px;
+    display: flex;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.logo img {
+    width: 240px;
+    height: 240px;
+    object-fit: fill;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+#dashboard-container,
+#tables-container {
+    background-color: #d6a7e0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#dashboard-container:hover,
+#tables-container:hover {
+    background-color: #b383c4;
+}
+
+#dashboard-container a,
+#tables-container a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+#dashboard-container a:hover,
+#tables-container a:hover {
+    color: #fff;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(254, 249, 255, 0.9);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 241, 249, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+#searchBar {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    min-width: 200px;
+}
+
+.nav-btn {
+    background-color: #d6a7e0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #b383c4;
+}
+
+.user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #d9b8e0;
+    flex-shrink: 0;
+}
+
+.user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weather-widget {
+    position: relative;
+    background-color: rgba(255, 239, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.weather-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.weather-widget>* {
+    position: relative;
+    z-index: 1;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart {
+    flex: 1;
+    background-color: rgba(255, 239, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tables-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+}
+
+.weather-table {
+    background-color: rgba(255, 239, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#forecastTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+#forecastTable th,
+#forecastTable td {
+    padding: 15px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#forecastTable th {
+    background-color: #d6a7e0;
+    color: white;
+}
+
+#forecastTable td {
+    border-top: 1px solid #ddd;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #d6a7e0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #b383c4;
+}
+
+.chat-section {
+    background-color: rgba(240, 234, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #d9b8e0;
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9b8e0;
+    border-radius: 25px;
+    background-color: #f9efff;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #d9b8e0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+    border-color: #b383c4;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #d6a7e0;
+    box-shadow: 0 0 0 2px rgba(214, 167, 224, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .charts {
+        flex-direction: column;
+    }
+
+    .chart {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .tables-content {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-section {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+    }
+
+    .table-controls {
+        justify-content: center;
+    }
+
+    .filter-select {
+        width: 100%;
+        max-width: 300px;
+    }
+}

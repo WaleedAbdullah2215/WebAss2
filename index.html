@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Weather App Logo">
+            </div>
+            <nav>
+                <div id="dashboard-container" class="nav-container">
+                    <a href="dashboard.html" class="active">Dashboard</a>
+                </div>
+                <div id="tables-container" class="nav-container">
+                    <a href="tables.html">Tables</a>
+                </div>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search for a city...">
+                    <button id="getWeatherBtn" class="nav-btn">Get Weather</button>
+                    <button id="toggleUnitBtn" class="nav-btn">°C / °F</button>
+                </div>
+                <div class="user-profile">
+                    <img src="pp.jpg" alt="User  Profile">
+                </div>
+            </header>
+            <section class="weather-widget">
+            </section>
+            <section class="charts">
+                <div class="chart">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="conditionsChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="forecastChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
